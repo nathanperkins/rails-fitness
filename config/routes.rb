@@ -6,7 +6,9 @@ RailsFitness::Application.routes.draw do
   post '/login', to: 'sessions#create'
   post 'logout', to: 'sessions#destroy', as: :logout
   
-  resources :users, except: :destroy
+  resources :users, except: :destroy do
+    resources :workouts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,6 @@
+<div class='well'>
+  This is workout <%= workout.id %>.
+  <% workout.exercises.each do |exercise| %>
+    <%= render exercise %>
+  <% end %>
+</div>

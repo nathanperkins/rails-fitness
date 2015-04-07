@@ -1,0 +1,6 @@
+<div class='well'>
+  <%= exercise.name %>
+  <% exercise.exercise_sets.each do |set| %>
+    <%= render set %>
+  <% end %>
+</div>
