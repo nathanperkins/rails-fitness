@@ -1,4 +1,11 @@
 RailsFitness::Application.routes.draw do
+
+  root 'application#home'
+
+  get '/login', to: 'sessions#new', as: :login
+  post '/login', to: 'sessions#create'
+  post 'logout', to: 'sessions#destroy', as: :logout
+  
   resources :users, except: :destroy
 
   # The priority is based upon order of creation: first created -> highest priority.
