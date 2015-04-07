@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -38,11 +37,14 @@ group :doc do
 end
 
 group :development do
+  gem 'quiet_assets'
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
